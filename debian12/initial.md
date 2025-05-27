@@ -1,4 +1,4 @@
-# Debian12一些命令
+# Debian12初始化命令
 ## 配置静态网络
 ```bash
 nano /etc/network/interfaces
