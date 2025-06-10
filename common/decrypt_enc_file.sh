@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # 解密脚本：sh decrypt_enc_file.sh xxxx.tar.gz.enc my-password
+# curl -sSL https://raw.githubusercontent.com/iapYang/iapyang-wiki/refs/heads/main/common/decrypt_enc_file.sh | bash -s backup.tar.gz.enc my-password
 
 # 参数检查
 if [ $# -ne 2 ]; then
