@@ -346,6 +346,27 @@ iface enp1s0 inet static
 systemctl restart networking
 ```
 
+先看看有没有 resolvconf：
+
+dpkg -l | grep resolvconf
+
+如果没有输出，安装：
+
+apt update
+apt install resolvconf
+
+然后启用：
+
+systemctl enable --now resolvconf
+
+重新应用网卡配置，最稳妥其实直接重启：
+
+reboot
+
+起来后检查：
+
+cat /etc/resolv.conf
+
 > **注意：** 如果当前是通过 SSH 修改远程机器的 IP/网关，重启网络后 SSH 很可能立即断开。最好在机器本地操作，或者确保新 IP 可以访问。
 
 如果网络服务重启异常，直接重启机器：
